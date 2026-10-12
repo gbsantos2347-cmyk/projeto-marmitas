@@ -1,0 +1,74 @@
+#MATHEUS HENRIQUE DE JESUS BEZERRA - 6034616
+#SISTEMA DE RELATORIO DE PEDIDOS DE MARMITAS
+
+#preço das marmitas
+
+mamitaP = 15.00
+mamitaM = 18.00
+mamitaG = 22.00
+
+#distancia da entrega da marmita
+
+#2km = gratis
+#2km a 5km = R$ 5,00
+#5km a 8km = R$ 8,00
+#8km ou mais = retirada no local - sem taxa
+
+#Historico de pedidos
+# aqui é onde vamos armazenar os pedidos feitos pelos clientes
+
+relatorio = []
+
+#Essa lista vai armazenar a quantidade de marmitas vendidas de cada tamanho, na ordem P, M e G.
+#E junto esta o calculo do valor unitario de cada marmita e a taxa de entrega.
+
+quantidadeP = int(input("Quantas marmitas foram vendidas Tam P?"))
+print("Tamanho: P ")
+print("Valor unitario: R$", mamitaP)
+print("Taxa de entrega: R$ 0,00")
+print("quantidade: ", quantidadeP)
+print("Valor total: R$", quantidadeP * mamitaP)
+
+
+#Essa parte de a quantidade de marmitas for menor ou igual a 0, o programa vai pedir para digitar novamente a quantidade de marmitas vendidas.
+
+while True:
+    if quantidadeP <= 0:
+        print("Quantidade invalida. Por favor, digite um valor positivo.")
+
+#Esse elif é para quando a quantidade de marmitas vendidas for maior que 0, o programa vai adicionar a quantidade de marmitas vendidas na lista relatorio e vai sair do loop.
+
+    elif quantidadeP > 0:    
+        relatorio.append(quantidadeP)
+        break
+#Essa e a parte de marmitas Tam M
+quantidadeM = int(input("Quantas marmitas foram vendidas Tam M?"))
+print("Tamanho: M ")
+print("Valor unitario: R$", mamitaM)
+print("Taxa de entrega: R$ 8,00")
+print("quantidade: ", quantidadeM)
+print("Valor total: R$", quantidadeM * mamitaM + 8)
+
+while True:
+    if quantidadeM <= 0:
+        print("Quantidade invalida. Por favor, digite um valor positivo.")
+
+    elif quantidadeM > 0:    
+        relatorio.append(quantidadeM)
+        break
+#Essa e a parte de marmitas Tam G
+quantidadeG = int(input("Quantas marmitas foram vendidas Tam G?"))
+print("Tamanho: G ")
+print("Valor unitario: R$", mamitaG)
+print("Taxa de entrega: R$ 5,00")
+print("quantidade: ", quantidadeG)
+print("Valor total: R$", quantidadeG * mamitaG + 5)
+
+while True:
+    if quantidadeG <= 0:
+        print("Quantidade invalida. Por favor, digite um valor positivo.")
+
+    elif quantidadeG > 0:    
+        relatorio.append(quantidadeG)
+        break
+    
