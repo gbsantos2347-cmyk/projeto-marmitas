@@ -2,12 +2,18 @@
 print('___Marmitaria___')
 
 # Gabriel Barreto Santos Araujo - RA: 6002218
+# Matheus Henrique de Jesus Bezerra - RA: 6034616 - Relatorio
+# Guilherme Batista Mota Costa - RA: 6012701
+# Gabriel Vilela Cardoso de Lima - RA: 5979358
+# Higor Pereira da Silva - RA: 5979471
 
 marmitaP = 15
 marmitaM = 18
 marmitaG = 22
 
 total_caixa = 0
+
+# Armazena os dados das compras
 relatorio = []
 
 while True:
@@ -90,7 +96,7 @@ while True:
             'total': total_fre,
             'distancia': dis
         }
-
+        # Acrecenta os dados no relatorio
         relatorio.append(pedido)
 
         # Mostrar resumo do pedido
@@ -105,18 +111,21 @@ while True:
     # Fechamento do dia
     elif opcao == '2':
         print('\n--- FECHAMENTO DO DIA ---')
-
+        
+        # Onde guarda as quantidades de marmitas vendidas por tamanho
         totalP = 0
         totalM = 0
         totalG = 0
         total_vendas = 0
-
+        
+        # Soma dos pedidos conforme o tamanho da marmita
         for pedido in relatorio:
             totalP += pedido['P']
             totalM += pedido['M']
             totalG += pedido['G']
             total_vendas += pedido['total']
-
+            
+        # Estrutura do relatorio
         print('Quantidade vendida de P:', totalP)
         print('Quantidade vendida de M:', totalM)
         print('Quantidade vendida de G:', totalG)
